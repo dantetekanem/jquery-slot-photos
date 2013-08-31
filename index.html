@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Slot Photo's - jQuery plugin</title>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.slotphotos.js"></script>
+	<style type="text/css">
+		#photos {
+			width: 640px;
+			height: 480px;
+			border: solid 1px #000;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="photos">
+
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$("#photos").slotPhotos({
+				slices: 3,
+				photos: ["images/01.jpg", "images/02.jpg", "images/03.jpg", "images/04.jpg", "images/05.jpg"],
+				direction: "vertical",
+				time: 1500, // 5s to change
+				speed: 500, // 500 miliseconds to transition speed (less is faster)
+				maintainRatio: true // only set the ratio false if your images are perfectly cropped
+			})
+		})
+	</script>
+
+</body>
+</html>
